@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>لسلومة 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g1:#2a1233;--g2:#4a1d4f;--g3:#6b2a5c;--card:rgba(255,255,255,.1);--line:rgba(255,255,255,.18);--tx:#fff6f9;--ac:#ff8fb8;--ac2:#ffd27a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Tajawal',Tahoma,Arial,sans-serif;color:var(--tx);background:linear-gradient(160deg,var(--g1),var(--g2) 55%,var(--g3)) fixed;line-height:1.9;overflow-x:hidden;font-size:1.05rem;transition:background 2s}
+body.bd{--g1:#3b1740;--g2:#6a2358;--g3:#a1405f}
+section{max-width:600px;margin:0 auto;padding:44px 20px;text-align:center}
+h1{font-size:clamp(2rem,9vw,3rem);margin:.2em 0;line-height:1.35}
+h2{font-size:clamp(1.35rem,6vw,1.7rem);color:var(--ac2);margin:0 0 .7em;line-height:1.5}
+.sub{opacity:.88}
+.glow{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.rv{opacity:0;transform:translateY(22px) scale(.98);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+.cd{display:flex;gap:8px;justify-content:center;margin:22px 0;direction:ltr}
+.cd div{flex:1;max-width:84px;padding:10px 4px}
+.cd b{display:block;font-size:1.8rem;font-variant-numeric:tabular-nums}
+.cd small{opacity:.75}
+.big{font-size:1.45rem;font-weight:800;margin:14px 0}
+.hide{display:none}
+.frame{position:relative;width:min(72%,290px);margin:10px auto 22px}
+.frame:before{content:"";position:absolute;inset:-18px;border-radius:40px;background:radial-gradient(closest-side,rgba(255,143,184,.45),transparent);filter:blur(14px);z-index:0}
+.frame img{position:relative;z-index:1;display:block;width:100%;aspect-ratio:5/7;object-fit:cover;object-position:50% 40%;border-radius:28px;border:3px solid rgba(255,255,255,.35);box-shadow:0 12px 36px rgba(0,0,0,.35)}
+.photo.in .frame img{animation:pop 1.2s both}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+.letter{text-align:right;font-size:1.1rem}
+.letter p{margin:.5em 0 1em}
+.wish,.mini{text-align:right;margin:10px 0;padding:12px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);opacity:0;transform:translateX(26px);transition:.7s}
+.wish.in,.mini.in{opacity:1;transform:none}
+.mini{text-align:center;transform:translateY(20px)}
+.msg{margin:22px 0;font-size:1.15rem}
+button{font:inherit;font-weight:700;color:#3a1230;background:linear-gradient(90deg,var(--ac),var(--ac2));border:0;border-radius:999px;padding:14px 28px;min-height:48px;font-size:1.05rem;cursor:pointer;box-shadow:0 8px 24px rgba(255,143,184,.3);transition:transform .2s;-webkit-tap-highlight-color:transparent}
+button:active{transform:scale(.95)}
+#sm{margin-top:18px;min-height:96px;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+#sm span{animation:pop .6s both}
+#hid{opacity:0;pointer-events:none;transition:opacity 1s;min-height:150px}
+#hid.show{opacity:1;pointer-events:auto}
+#fin{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;flex-direction:column;background:#0e0612;padding:24px;text-align:center}
+#fin.on{display:flex}
+#ft{font-size:clamp(1.3rem,6vw,1.9rem);max-width:520px;min-height:4.5em;opacity:0;transition:opacity 1.6s}
+#ft.show{opacity:1}
+#end{display:none;position:relative;z-index:2}
+#end h1{font-size:clamp(1.6rem,7.5vw,2.8rem)}
+#x{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:14px;display:none;background:var(--card);color:var(--tx);box-shadow:none;padding:8px 16px;min-height:40px;z-index:3}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+footer{padding:30px;text-align:center;opacity:.65}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv,.wish,.mini{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<section id="hero">
+  <div style="font-size:2.6rem">🎀✨</div>
+  <h1 class="glow">أهلًا يا سلومة</h1>
+  <p class="sub">حدا حضّرلك شغلة صغيرة... وبصراحة طلعت مش صغيرة كثير 😌</p>
+  <div id="before">
+    <p class="sub">باقي على بداية يومك:</p>
+    <div class="cd"><div class="card"><b id="d">0</b><small>يوم</small></div><div class="card"><b id="h">0</b><small>ساعة</small></div><div class="card"><b id="m">0</b><small>دقيقة</small></div><div class="card"><b id="s">0</b><small>ثانية</small></div></div>
+    <p class="sub">كملي نزول، في شغلات مستنيتك. 👇</p>
+  </div>
+  <div id="today" class="hide">
+    <div class="big">اليوم صار عمرك <span data-age></span> سنة! 🎉</div>
+    <div class="big glow">Happy <span data-ord></span> Birthday, Salouma! ❤️</div>
+    <p class="sub">اليوم، <span data-date></span>، تكملين <span data-age></span> سنة من العمر... وأنا شايف إنها بتكون سنة حلوة.</p>
+  </div>
+  <div id="after" class="hide">
+    <div class="big"><span data-age></span> سنة من كونك أنتِ ❤️</div>
+    <p class="sub">عيد ميلادك مرّ، بس الاحتفال ما خلص.</p>
+  </div>
+</section>
+
+<section class="photo rv" id="ph">
+  <div class="frame"><img id="pi" alt="صورة سلومة" decoding="async"></div>
+  <p class="sub">وبالمناسبة... صاحبة اليوم لازم تكون موجودة في صفحتها. ❤️</p>
+</section>
+
+<section>
+  <h2 class="rv">21 سنة... بداية فصل جديد ✨</h2>
+  <div class="card letter rv">
+    <p><span data-age></span> سنة مش مجرد رقم.<br>هي ذكريات، ومواقف، وضحكات، وأيام صنعت الشخص اللي أنتِ عليه اليوم.</p>
+    <p>وأتمنى يكون الفصل الجاي أحلى من كل اللي قبله: تضحكي أكثر، تحققي أكثر، تكتشفي أماكن جديدة، وتعيشي أيام تستاهل تتذكريها بعد سنين.</p>
+    <p style="margin-bottom:0">وليس مطلوبًا منكِ أن يكون كل شيء مثاليًا. يكفي أن تستمري، وتكبري، وتتعلمي، وتكوني أنتِ.</p>
+  </div>
+  <p class="msg rv">اليوم ممنوع الزعل. عندك مهمة واحدة بس: تبتسمي. 😌</p>
+</section>
+
+<section>
+  <h2 class="rv">أتمنى لكِ...</h2>
+  <div>
+    <div class="wish">🌷 أيامًا هادئة لما تحتاجي للراحة.</div>
+    <div class="wish">✨ نجاحًا يخليكِ فخورة بحالك.</div>
+    <div class="wish">🌍 مغامرات وذكريات حلوة.</div>
+    <div class="wish">📚 إنك توصلي لكل شيء بتشتغلي عشانه.</div>
+    <div class="wish">😂 ضحكات كثيرة من القلب.</div>
+    <div class="wish">❤️ ناسًا صادقين حواليكِ.</div>
+    <div class="wish">🌙 راحة بال بالأيام الصعبة.</div>
+    <div class="wish">🎂 وسنين جاية أحلى بكثير.</div>
+  </div>
+</section>
+
+<section>
+  <h2 class="rv">ولو بدي أتمنى لكِ أشياء من قلبي...</h2>
+  <div class="card letter rv">
+    <p>بتمنى يجي يوم تطلعي فيه ورا وتشوفي كل التعب اللي مرّيتي فيه، وتقولي: «ما كان ضايع».</p>
+    <p>وبتمنى ما تحسي حالك لحالك بأي يوم، حتى لو الدنيا زحمة والكل مشغول.</p>
+    <p style="margin-bottom:0">وإذا كان في أمنية وحدة بس، فهي تكون أيامك الجاية ألطف عليكِ من اللي مضت.</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="rv">أشياء أتمنى ألا تنسيها عن نفسك ❤️</h2>
+  <div class="mini">أنتِ تستاهلي الفرح، من غير ما تثبتي شيء لحدا.</div>
+  <div class="mini">مش لازم كل الأيام تكون مثالية، ويوم عادي ما بينقص منكِ شيء.</div>
+  <div class="mini">الأشياء الحلوة بتاخد وقتها، بس بتيجي.</div>
+  <div class="mini">الخطوات الصغيرة اللي قطعتيها محسوبة، حتى لو ما حدا انتبه إلها.</div>
+  <div class="mini">ضلّي قريبة من الأشياء اللي بتخليكِ مبسوطة.</div>
+</section>
+
+<section>
+  <h2 class="rv">اضغطي إذا احتجتِ ابتسامة</h2>
+  <button id="sb">ابتسامة ❤️</button>
+  <div id="sm" class="sub"></div>
+</section>
+
+<section>
+  <div id="hid" class="card">
+    <button id="hb">استني... لسا في شيء صغير 👀</button>
+    <p id="hm" class="hide" style="margin:14px 0 0"></p>
+  </div>
+</section>
+
+<section>
+  <p class="msg rv">خذي نفسًا... وابتسمي. هذا اليوم إلك. 🌷</p>
+  <button id="go">المفاجأة الأخيرة 🎁</button>
+</section>
+
+<footer>صُنع خصيصًا لكِ ❤️</footer>
+
+<div id="fin">
+  <button id="x">إغلاق</button>
+  <div id="ft"></div>
+  <div id="end">
+    <h1 class="glow">🎉 HAPPY <span data-ord></span> BIRTHDAY SALOUMA 🎉</h1>
+    <p style="font-size:1.35rem;margin:.6em 0 0">إسلام أبو موسى</p>
+    <p style="font-size:1.1rem;opacity:.85;margin:0 0 .8em" dir="ltr">3 October 2005</p>
+    <p class="glow" style="font-size:1.3rem;font-weight:700"><span data-age></span> years of being you. ❤️</p>
+  </div>
+</div>
+
+<script>
+(function(){
+var PHOTO="salouma.jpg"; // غيّري اسم الصورة هنا إذا كان مختلفًا
+var BIRTH="2005-10-03";
+var bp=BIRTH.split("-").map(Number),BY=bp[0],BM=bp[1]-1,BD=bp[2];
+var $=function(i){return document.getElementById(i)},all=function(s){return document.querySelectorAll(s)};
+var RM=window.matchMedia&&matchMedia("(prefers-reduced-motion:reduce)").matches;
+var debug=/[?&]test(&|=|$)/.test(location.search);
+function ord(n){var a=n%100,b=n%10;return n+((a>=11&&a<=13)?"th":b===1?"st":b===2?"nd":b===3?"rd":"th")}
+var months=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
+var now=new Date(),y=now.getFullYear();
+var start=new Date(y,BM,BD),stop=new Date(y,BM,BD+1);
+var age=y-BY;
+function fill(){
+  all("[data-age]").forEach(function(e){e.textContent=age});
+  all("[data-ord]").forEach(function(e){e.textContent=ord(age)});
+  all("[data-date]").forEach(function(e){e.textContent=BD+" "+months[BM]+" "+y});
+}
+fill();
+
+// photo
+var pi=$("pi");
+if(pi){pi.onerror=function(){var p=$("ph");if(p)p.style.display="none"};pi.src=PHOTO}
+
+// canvas (light)
+var cv=$("cv"),cx=cv.getContext("2d"),P=[],run=false,cols=["#ff8fb8","#ffd27a","#fff","#b79cff","#7fe0c3"];
+function size(){cv.width=innerWidth;cv.height=innerHeight}size();addEventListener("resize",size);
+function confetti(n){
+  n=RM?Math.round(n/4):n;
+  for(var i=0;i<n&&P.length<200;i++)P.push({t:0,x:Math.random()*cv.width,y:-10-Math.random()*cv.height*.25,vx:Math.random()*2-1,vy:2+Math.random()*3,r:3+Math.random()*4,a:Math.random()*6,c:cols[i%5],l:320});
+  go();
+}
+function firework(){
+  var x=cv.width*(.15+Math.random()*.7),y=cv.height*(.15+Math.random()*.4),c=cols[Math.floor(Math.random()*5)];
+  for(var i=0;i<36;i++){var a=Math.PI*2*i/36,v=1.5+Math.random()*3;P.push({t:1,x:x,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,r:2,c:c,l:60})}
+  go();
+}
+function go(){if(!run){run=true;requestAnimationFrame(fr)}}
+function fr(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  P=P.filter(function(p){return p.l>0&&p.y<cv.height+20});
+  P.forEach(function(p){
+    p.l--;p.x+=p.vx;p.y+=p.vy;
+    if(p.t){p.vy+=.05;cx.globalAlpha=Math.max(p.l/60,0);cx.fillStyle=p.c;cx.beginPath();cx.arc(p.x,p.y,p.r,0,7);cx.fill()}
+    else{p.a+=.1;cx.globalAlpha=1;cx.fillStyle=p.c;cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillRect(-p.r,-p.r/2,p.r*2,p.r);cx.restore()}
+  });
+  if(P.length)requestAnimationFrame(fr);else{run=false;cx.clearRect(0,0,cv.width,cv.height)}
+}
+
+// state + countdown
+var st="",timer;
+function show(id,on){var e=$(id);if(e)e.classList.toggle("hide",!on)}
+function setState(s){
+  if(s===st)return;
+  var first=st==="";st=s;
+  show("before",s==="before");show("today",s==="today");show("after",s==="after");
+  document.body.classList.toggle("bd",s!=="before");
+  if(s==="today")setTimeout(function(){confetti(130)},first?600:0);
+}
+function tick(){
+  var n=new Date(),diff=start-n;
+  if(debug||(diff<=0&&n<stop))setState("today");
+  else if(n>=stop)setState("after");
+  else{
+    setState("before");
+    var t=Math.floor(diff/1000);
+    $("d").textContent=Math.floor(t/86400);$("h").textContent=Math.floor(t%86400/3600);
+    $("m").textContent=Math.floor(t%3600/60);$("s").textContent=t%60;
+  }
+}
+tick();timer=setInterval(tick,1000);
+
+// reveal on scroll
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;
+  var el=e.target;io.unobserve(el);
+  var sib=[].filter.call(el.parentNode.children,function(c){return c.classList.contains(el.classList[0])});
+  var d=(el.classList.contains("wish")||el.classList.contains("mini"))?Math.max(sib.indexOf(el),0)*350:0;
+  setTimeout(function(){el.classList.add("in")},RM?0:d);
+})},{threshold:.35});
+all(".rv,.wish,.mini").forEach(function(e){io.observe(e)});
+
+// smile
+var smiles=["ابتسمي يا سلومة، في حدا سعيد هلأ بس لأنه قدر يعمل لكِ هاي المفاجأة. ❤️","خبر عاجل: سلومة لسا ممنوعة من الحزن اليوم. القرار رسمي. 😂","لو الابتسامة بتنحسب إنجاز، اليوم مطلوب منكِ إنجاز كبير. 😌✨","هاي مش رسالة مهمة... بس تذكير إنكِ تستاهلي أيام حلوة.","عيد الميلاد بده كيك... بس الموقع ما بيقدر يجيب، فخدي Confetti بدالها. 🎂","إذا كان يومك تقيل، خدي نفسًا وكملي. بكرة أخف، وعدًا.","سلومة، لا تنسي تشربي مي اليوم. المفاجأة لسا طويلة. 💧😂","في ناس بتفرح لما تضحكي، فاضحكي ولو شوي. 🌷","رسالة سرية: أنتِ ألطف مما بتتخيلي. بس لا تحكي لحدا. 🤫"];
+var last=-1,sm=$("sm");
+$("sb").onclick=function(){
+  var i;do{i=Math.floor(Math.random()*smiles.length)}while(i===last);last=i;
+  sm.innerHTML="";var s=document.createElement("span");s.textContent=smiles[i];sm.appendChild(s);
+  confetti(30);
+};
+
+// hidden surprise
+var hid=$("hid"),hm=$("hm"),hs=0;
+function sc(){
+  var h=document.documentElement.scrollHeight-innerHeight;
+  if(h>0&&scrollY/h>.55){hid.classList.add("show");removeEventListener("scroll",sc)}
+}
+addEventListener("scroll",sc,{passive:true});sc();
+$("hb").onclick=function(){
+  hm.classList.remove("hide");
+  if(hs===0){hm.textContent="كنتِ مفكرة إن المفاجأة خلصت؟ 😌";hs=1}
+  else{hm.textContent="في كمان شيء بسيط: مهما صار هالسنة، في ناس فخورة فيكِ. وهلأ اضغطي على الهدية اللي تحت. 🎁";hs=2;confetti(40)}
+};
+
+// final surprise
+var tm=[],fw;
+function later(f,ms){tm.push(setTimeout(f,ms))}
+function say(t,ms){later(function(){var f=$("ft");f.classList.remove("show");setTimeout(function(){f.textContent=t;f.classList.add("show")},RM?0:900)},ms)}
+$("go").onclick=function(){
+  $("fin").classList.add("on");$("end").style.display="none";$("x").style.display="none";$("ft").style.display="block";$("ft").textContent="";$("ft").classList.remove("show");
+  say("قبل ما تخلص المفاجأة...",300);
+  say("في شيء واحد أتمنى أنكِ تتذكريه دائمًا.",4500);
+  say("أتمنى تكون سنتك الـ"+age+" مليانة بأيام تخليكِ تبتسمي من قلبك.",9000);
+  say("كل عام وأنتِ بخير يا سلومة ❤️",14500);
+  later(function(){
+    $("ft").style.display="none";$("end").style.display="block";$("x").style.display="block";
+    confetti(150);firework();
+    if(!RM)fw=setInterval(firework,1400);
+  },19000);
+};
+$("x").onclick=function(){
+  tm.forEach(clearTimeout);tm=[];clearInterval(fw);
+  $("fin").classList.remove("on");$("x").style.display="none";
+};
+})();
+</script>
+</body>
+</html>
